@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="utf-8"/>
+
+<title>Portfólio de Arthur Souza Sally</title>
+
+<style type="text/css">
+
+body{cursor:default;background:rgb(0,0,0);}
+
+:not(p){font-family:calibri;color:rgb(255,255,255);font-weight:bold;text-transform:uppercase;font-size:max(1.4vw,2.4vh);text-shadow:0px 0px 2px rgb(255,255,255),0px 0px 3px rgb(255,255,255);}
+b{font-size:max(2.1vw,3.6vh);}
+.p1{font-size:max(4.2vw,7.2vh);line-height:0;}
+.p2{font-size:max(3.5vw,6.0vh);line-height:0;}
+.p3{font-size:max(2.8vw,4.8vh);line-height:0;}
+.p4{font-size:max(0.7vw;1.2vh);line-height:0;color:rgb(127,127,127);text-shadow:0px 0px 2px rgb(127,127,127),0px 0px 3px rgb(127,127,127);}
+summary{list-style:none;}
+
+a{text-decoration:none;}
+
+.op1{border:none;height:10vh;width:100%;filter:contrast(90%);}
+.op1:hover{border:none;height:10vh;width:100%;filter:contrast(130%);}
+
+</style>
+
+<script type="text/javascript" src="ext/jquery.js"></script>
+
+<script type="text/javascript">
+
+document.onselectstart=new Function ("return false")
+document.oncontextmenu=new Function ("return false")
+
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+
+function atualizar(){
+	var d = new Date();
+	var h = d.getHours();
+	if(h >= 0 && h < 12){
+		document.getElementById("t001").innerHTML = "m Dia";
+	}else if(h>=12 && h <=17){
+		document.getElementById("t001").innerHTML = "a Tarde";
+	}else{
+		document.getElementById("t001").innerHTML = "a Noite";
+	}
+	$("#sobre").hide();
+	$("#projetos").hide();
+	$("#referencias").hide();
+	$("#tudo").hide();
+	$("#carregar").fadeToggle(1000);
+	$("#tudo").fadeIn(1000);
+}
+
+</script>
+
+</head>
+
+<body onload="atualizar()">
+
+<!-- tela de Loading -->
+<div id="carregar" style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;align-items:center;display:flex;justify-content:center;z-index:2;background:rgb(0,0,0);">
+	CARREGANDO
+</div>
+
+<!-- Corpo do Site -->
+<div id="tudo" style="position:absolute;top:0px;left:0px;right:0px;z-index:1;" align="center">
+	<div style="width:100%;" align="left">
+		<a href="index.html">
+			<video width="50%" autoplay loop>
+				<source src="ext\logo.webm" type="video/webm"/>
+				<source src="ext\logo.mp4" type="video/mp4"/>
+			</video>
+		</a>
+	</div>
+	<div style="width:100%;" align="center">
+		<div style="width:calc(100% - 80px);" align="left">
+			<!-- Sobre -->
+			<img src="ext\sobre.gif" style="height:max(4.2vw,7.2vh);" onmousedown="$('#sobre').fadeToggle(250);"/>
+			<div id="sobre" style="width:100%;" align="center">
+				<div style="width:80%;" align="left">
+					<span style="margin-left:50px;">Bo<font id="t001"></font>! Meu nome é Arthur Souza Sally (acho que já deu pra perceber), sou um programador formado em Engenharia de Computação pela PUC Goiás com o objetivo de trabalhar com Desenvolvimento de Jogos. Atualmente eu venho estudando por conta própria com o objetivo de me tornar um Tech Art com foco em Modern OpenGL e Blender.</span><br/>
+					<span style="margin-left:50px;">Eu tenho experiencia em projetos utilizando HTML, CSS, PHP, JavaScript para criação de sites. Meus dois primeiros jogos foram criados usando Python e OpenGL. Recentemente eu tenho me focado em mudar para a linguagem Rust na hora de desenvolver jogos e estudar o Blender para Modelagem de Cenarios, Escultura de Personagens, criação de materiais, texturas, animações e renderização de efeitos e videos (tanto até, boa parte deste site foi feito usando o Blender).</span><br/>
+				</div>
+			</div>
+			<br/>
+			<!-- Projetos -->
+			<img src="ext\projetos.gif" style="height:max(4.2vw,7.2vh);" onmousedown="$('#projetos').fadeToggle(250);"/>
+			<div id="projetos" style="width:100%;max-height:40vh;overflow:auto;" align="center">
+				<div style="width:95%;">
+					<a href="https://arthursouzasally.itch.io/hannah-hill" target="_blank"><button class="op1" style="background:url('int/002.webp');background-size:100%;background-position:0px 85%;">Hannah Hill</button></a>
+					<a href="https://arthursouzasally.itch.io/lond" target="_blank"><button class="op1" style="background:url('int/001.webp');background-size:100%;background-position:0px 55%;">Lond</button></a>
+				</div>
+			</div>
+			<br/>
+			<!-- Referências -->
+			<img src="ext\referencias.gif" style="height:max(4.2vw,7.2vh);" onmousedown="$('#referencias').fadeToggle(250);"/>
+			<div id="referencias" style="width:100%;" align="center">
+				<div style="width:95%;overflow:auto;display:flex;flex-wrap:wrap;">
+					<a href="https://arthursouzasally.itch.io/" target="_blank"><img src="ext/itch.png" style="filter:blur(1px);"/></a><br/>
+					<a href="https://github.com/ArthurSouzaSally" target="_blank"><img src="ext/gh.png" style="filter:blur(1px);"/></a><br/>
+					<a href="https://www.instagram.com/arthursouzasally/" target="_blank"><img src="ext/insta.png" style="filter:blur(1px);"/></a>
+				</div>
+			</div>
+			<br/>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
