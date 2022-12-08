@@ -54,8 +54,11 @@ function atualizar(){
 	$("#projetos").hide();
 	$("#referencias").hide();
 	$("#tudo").hide();
-	$("#carregar").fadeToggle(1000);
-	$("#tudo").fadeIn(1000);
+	$("#carregar").text("CLIQUE AQUI");
+	$("#carregar").click(function(){
+		$("#carregar").fadeToggle(1000);
+		$("#tudo").fadeIn(1000);
+	});
 }
 
 </script>
