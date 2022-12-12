@@ -54,12 +54,7 @@ function atualizar(){
 	$("#projetos").hide();
 	$("#referencias").hide();
 	$("#tudo").hide();
-	$("#carregar").text("PONHA O MOUSE AQUI");
-	$("#carregar").hover(function(){
-		$("#carregar").text("CLIQUE");
-	},function(){
-		$("#carregar").text("PONHA O MOUSE AQUI");
-	});
+	$("#carregar").text("CLIQUE");
 	$("#carregar").click(function(){
 		$("#carregar").fadeOut(1000);
 		$("#tudo").fadeIn(1000);
